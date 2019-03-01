@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Evento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <%= typeof msg != 'undefined' ? msg : '' %>
+        <form action="/img/events/<%= event._id %>/upload" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+              <input type="file" name="myImage" class="btn btn-success">
+            </div><br>
+
+            <div class="form-group">
+              <label for="">Caption of image</label>
+              <input type="text" name="captionOfEvent" id="captionOfEvent" class="form-control" >
+            </div>
+            
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Evento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Event Details</h1>
+        <%= typeof msg != 'undefined' ? msg : '' %>
+        <form action="/img/events" method="post">
+            <div class="form-group">
+              <label for="item">Title</label>
+              <input type="text" name="titleOfEvent" id="titleOfEvent" class="form-control">
+            </div><br>
+            <div class="form-group">
+                <label for="item">Desciption about Event</label>
+                <input type="text" name="descOfEvent" id="descOfEvent" class="form-control">
+            </div>
+            <!--<div class="form-group">
+              <input type="file" name="imageOfEvent" class="btn btn-success">
+            </div>--><br>
+            <div class="form-group">
+                <label for="item">Official facebook link of event</label>
+                <input type="text" name="flink" id="flink" class="form-control">
+            </div><br>
+            <div class="form-group">
+                <label for="item">Official instagram link  of event</label>
+                <input type="text" name="ilink" id="ilink" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
